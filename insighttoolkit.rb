@@ -3,6 +3,8 @@ class Insighttoolkit < Formula
   homepage "http://www.itk.org"
   url "https://downloads.sourceforge.net/project/itk/itk/4.10/InsightToolkit-4.10.1.tar.gz"
   sha256 "cb1048facf2b60cebf4ea0b3f89a13a32f8036d906aab3cfafa65e94760caa7a"
+  revision 1
+
   head "git://itk.org/ITK.git"
 
   bottle do
@@ -91,5 +93,9 @@ class Insighttoolkit < Formula
       system "cmake", *args
       system "make", "install"
     end
+  end
+
+  test do
+    shell_output("#{opt_prefix}/bin/itkTestDriver 2>&1", 1)
   end
 end
