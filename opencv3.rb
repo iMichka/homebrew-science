@@ -136,6 +136,9 @@ class Opencv3 < Formula
     args << "-DWITH_QT=" + (with_qt ? "ON" : "OFF")
     args << "-DWITH_TBB=" + arg_switch("tbb")
     args << "-DWITH_VTK=" + arg_switch("vtk")
+    # Make sure the .so file is called cv2.so, instead of
+    # cv2.cpython-36m-darwin.so (so it can be imported).
+    args << "-DPYTHON3_CVPY_SUFFIX='.so'" if build.with? "python3"
 
     if build.include? "32-bit"
       args << "-DCMAKE_OSX_ARCHITECTURES=i386"
