@@ -3,6 +3,7 @@ class Shogun < Formula
   homepage "http://www.shogun-toolbox.org"
   url "http://shogun-toolbox.org/archives/shogun/releases/6.0/sources/shogun-6.0.0.tar.bz2"
   sha256 "7bb0432e1eea86105f83ba74db4a89716d256693db3f678e088f2a7ca6118e82"
+  revision 1
 
   bottle do
     sha256 "06aafb46d4cd4e53ebed6f8bb32e1279b5a8b5de9aae2359261cee9de87fc2ca" => :sierra
@@ -30,12 +31,14 @@ class Shogun < Formula
   depends_on "r" => :optional
   depends_on "lua" => :optional
   depends_on "octave" => :optional
-  depends_on "opencv" => :optional
+  depends_on "opencv@2" => :optional
   depends_on :java => :optional
   depends_on :python => :optional
 
   if build.with? "python"
     include Language::Python::Virtualenv
+    # Reduce memory usage below 4 GB for Circle CI.
+    ENV["MAKEFLAGS"] = "-j1" if ENV["CIRCLECI"]
 
     depends_on "swig" => :build
 
