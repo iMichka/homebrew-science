@@ -3,6 +3,7 @@ class Pbsuite < Formula
   homepage "http://sourceforge.net/projects/pb-jelly/"
   url "https://downloads.sourceforge.net/project/pb-jelly/PBSuite_14.7.14.tgz"
   sha256 "98dcda7598f0ecf1a4223ba249f699add4438c60f01ae67b07fdca01142cf145"
+  revision 1
   # doi "10.1371/journal.pone.0047768", "10.1186/1471-2105-15-180"
   # tag "bioinformatics"
 
