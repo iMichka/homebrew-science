@@ -1,6 +1,7 @@
 class Blasr < Formula
   desc "PacBio long read aligner"
   homepage "https://github.com/PacificBiosciences/blasr"
+  revision 1
   # doi "10.1186/1471-2105-13-238"
   # tag "bioinformatics"
 
