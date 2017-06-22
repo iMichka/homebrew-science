@@ -3,6 +3,7 @@ class Nip2 < Formula
   homepage "http://www.vips.ecs.soton.ac.uk/"
   url "http://www.vips.ecs.soton.ac.uk/supported/8.4/nip2-8.4.0.tar.gz"
   sha256 "7a8c8b145216fbf2212de6eda4fbaff1884e3e1f8970f5e14e12a5df164e2c8a"
+  revision 1
 
   bottle do
     cellar :any
@@ -15,7 +16,6 @@ class Nip2 < Formula
   deprecated_option "with-check" => "with-test"
 
   depends_on "pkg-config" => :build
-  depends_on "XML::Parser" => :perl
   depends_on "gettext"
   depends_on "glib"
   depends_on "gtk+"
@@ -27,7 +27,17 @@ class Nip2 < Formula
   depends_on "goffice" => :recommended
   depends_on "libgsf" => :recommended
 
+  resource "XML::Parser" do
+    url "http://search.cpan.org/CPAN/authors/id/M/MS/MSERGEANT/XML-Parser-2.36.tar.gz"
+    sha256 "9fd529867402456bd826fe0e5588d35b3a2e27e586a2fd838d1352b71c2ed73f"
+  end
+
   def install
+    resource("XML::Parser").stage do
+      system "perl", "Makefile.PL", "LIB=#{libexec}/PerlLib", "PREFIX=#{libexec}/vendor"
+      system "make", "install"
+    end if OS.mac?
+
     args = %W[
       --disable-dependency-tracking
       --prefix=#{prefix}
