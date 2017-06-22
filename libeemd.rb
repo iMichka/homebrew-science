@@ -3,6 +3,7 @@ class Libeemd < Formula
   homepage "https://bitbucket.org/luukko/libeemd"
   url "https://bitbucket.org/luukko/libeemd/get/v1.4.tar.gz"
   sha256 "c484f4287f4469f3ac100cf4ecead8fd24bf43854efa63650934dd698d6b298b"
+  revision 1
   head "https://bitbucket.org/luukko/libeemd.git"
   # doi "10.1007/s00180-015-0603-9"
 
