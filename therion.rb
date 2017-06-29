@@ -3,7 +3,7 @@ class Therion < Formula
   homepage "https://therion.speleo.sk"
   url "https://therion.speleo.sk/downloads/therion-5.3.16.tar.gz"
   sha256 "73cda5225725d3e8cadd6fada9e506ab94b093d4e7a9fc90eaf23f8c7be6eb85"
-  revision 3
+  revision 4
 
   bottle do
     sha256 "0007c14f7f19f1b6397fe58c367548b18ee27519b20820d53076f1453d3b0dee" => :sierra
