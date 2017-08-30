@@ -4,6 +4,7 @@ class OmeCommon < Formula
   url "https://downloads.openmicroscopy.org/ome-common-cpp/5.4.2/source/ome-common-cpp-5.4.2.tar.xz"
   sha256 "16dde8fc2197267177430b8766da9c64ceee2e68161be66d28b611569fb1035b"
   head "https://github.com/ome/ome-common-cpp.git", :branch => "develop", :shallow => false
+  revision 1
 
   bottle do
     sha256 "d203264e53f1382666e45e1572bbdb14a6a5c4829d6977cf94866092a487cc1c" => :sierra
