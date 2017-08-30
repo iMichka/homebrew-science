@@ -2,6 +2,7 @@ class Pykep < Formula
   desc "Library providing basic tools for astrodynamics research"
   homepage "https://esa.github.io/pykep/"
   head "https://github.com/esa/pykep.git"
+  revision 1
 
   stable do
     url "https://github.com/esa/pykep/archive/v1.3.9.tar.gz"
@@ -26,8 +27,8 @@ class Pykep < Formula
   end
 
   depends_on "cmake" => :build
-  depends_on "boost"
-  depends_on "boost-python"
+  depends_on "boost@1.59"
+  depends_on "boost-python@1.59"
   depends_on :python => :recommended
 
   def install
