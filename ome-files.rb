@@ -4,6 +4,7 @@ class OmeFiles < Formula
   url "https://downloads.openmicroscopy.org/ome-files-cpp/0.4.0/source/ome-files-cpp-0.4.0.tar.xz"
   sha256 "eca5741be2b70c26f55423362bcc862762244b3facb95e8d49043f3a610ca280"
   head "https://github.com/ome/ome-files-cpp.git", :branch => "develop", :shallow => false
+  revision 1
 
   bottle do
     sha256 "8252403ab722cebffa018b252682e28a27ab78bd7184474a318f29a3f3ffa523" => :sierra
