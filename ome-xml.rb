@@ -4,6 +4,7 @@ class OmeXml < Formula
   url "https://downloads.openmicroscopy.org/ome-model/5.5.6/source/ome-model-5.5.6.tar.xz"
   sha256 "1821c324ed85157aaac1b046649f97334509268eca1e43f059f74bff52908225"
   head "https://github.com/openmicroscopy/bioformats.git", :branch => "develop", :shallow => false
+  revision 1
 
   bottle do
     cellar :any
