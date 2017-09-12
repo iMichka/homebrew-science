@@ -4,6 +4,7 @@ class Dealii < Formula
   url "https://github.com/dealii/dealii/releases/download/v8.5.1/dealii-8.5.1.tar.gz"
   sha256 "d33e812c21a51f7e5e3d3e6af86aec343155650b611d61c1891fbc3cabce09ae"
   head "https://github.com/dealii/dealii.git"
+  revision 1
 
   bottle do
     cellar :any
