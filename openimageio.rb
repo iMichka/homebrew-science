@@ -4,6 +4,7 @@ class Openimageio < Formula
   url "https://github.com/OpenImageIO/oiio/archive/Release-1.7.17.tar.gz"
   sha256 "669c59d06399dd882c3e2469bb3a4b33d537db150f6fe056495c3429b5c3838f"
   head "https://github.com/OpenImageIO/oiio.git"
+  revision 1
 
   bottle do
     cellar :any
